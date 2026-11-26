@@ -92,7 +92,7 @@ fit_adaptive_basis <- function(data, kernel_bw = "adaptive", dim_basis = "adapti
     return(eigenfun_unique_data[loc_unique_data,])
   }
 
-  return(list(d = dim_basis, fun = eigenfun_discrete))
+  return(list(d = dim_basis, fun = eigenfun_discrete, eigenvalues = eigen_sys$values))
 }
 
 adaptive_bw <- function(data, ref_model){
